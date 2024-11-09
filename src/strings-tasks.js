@@ -42,8 +42,23 @@ function getStringLength(inString) {
  *   isString('test') => true
  *   isString(new String('test')) => true
  */
-function isString(/* value */) {
+function isString(/* inString */) {
   throw new Error('Not implemented');
+  /*
+  let answer;
+  const str = String(inString);
+
+  if (str === `undefined`) {
+    answer = false;
+  } else if (str === `null`) {
+    answer = false;
+  } else if (str === `[object Object]`) {
+    answer = false;
+  } else {
+    answer = true;
+  }
+  return answer;
+  */
 }
 
 /**
@@ -58,8 +73,16 @@ function isString(/* value */) {
  *   concatenateStrings('aa', '') => 'aa'.
  *   concatenateStrings('', 'bb') => 'bb'
  */
-function concatenateStrings(/* value1, value2 */) {
-  throw new Error('Not implemented');
+function concatenateStrings(string1 = '', string2 = '') {
+  let str1;
+  let str2;
+  str1 = '';
+  str2 = '';
+  str1 = String(string1);
+  str2 = String(string2);
+  let str = '';
+  str = str.concat(str1, str2);
+  return str;
 }
 
 /**
